@@ -1,0 +1,26 @@
+<div class="switch theme-switch" title="Toggle light / dark theme">
+    <label class="toggle" for="ocs-theme-toggle-input">
+        <input type="checkbox" id="ocs-theme-toggle-input" onchange="window.toggleSiteTheme(this.checked)">
+        <span class="slider"></span>
+    </label>
+    <span class="label-text" id="ocs-theme-label" aria-hidden="true">🌙</span>
+</div>
+
+<script>
+  (function () {
+    function syncThemeUI() {
+      var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      var input = document.getElementById('ocs-theme-toggle-input');
+      var label = document.getElementById('ocs-theme-label');
+      if (input) input.checked = isLight;
+      if (label) label.textContent = isLight ? '☀️' : '🌙';
+    }
+    window.toggleSiteTheme = function (isLight) {
+      var theme = isLight ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      try { localStorage.setItem('ocs-theme', theme); } catch (e) {}
+      syncThemeUI();
+    };
+    document.addEventListener('DOMContentLoaded', syncThemeUI);
+  })();
+</script>

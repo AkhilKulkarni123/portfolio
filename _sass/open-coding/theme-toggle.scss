@@ -1,0 +1,42 @@
+/* ============================================================
+   Site theme toggle: lightweight runtime light/dark switch.
+
+   - Default (no attribute, or data-theme="dark") matches the
+     site's existing dark minima skin, so nothing changes for
+     anyone who never touches the toggle.
+   - data-theme="light" (set by the switch in the header, see
+     _includes/theme-toggle.html) forces a light palette on the
+     body and on any component that reads the --ocs-theme-*
+     custom properties below.
+   ============================================================ */
+
+:root {
+  --ocs-theme-bg: #0f1013;
+  --ocs-theme-text: #f2f2f2;
+  --ocs-theme-card: #1c1d24;
+  --ocs-theme-border: #33353f;
+  --ocs-theme-muted: #a8a8b3;
+  --ocs-theme-accent: #FA8072;
+}
+
+html[data-theme="light"] {
+  --ocs-theme-bg: #ffffff;
+  --ocs-theme-text: #1a1a1a;
+  --ocs-theme-card: #f7f7f9;
+  --ocs-theme-border: #e2e2e2;
+  --ocs-theme-muted: #5b5b66;
+  --ocs-theme-accent: #d9584a;
+}
+
+html[data-theme="light"] body {
+  background-color: var(--ocs-theme-bg) !important;
+  color: var(--ocs-theme-text) !important;
+}
+
+.theme-switch {
+  margin-left: 12px;
+
+  .label-text {
+    font-size: 14px;
+  }
+}
