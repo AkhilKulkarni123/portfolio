@@ -1,3 +1,14 @@
+<!-- Restore saved site theme before first paint to avoid a flash of the wrong theme -->
+<script>
+(function () {
+  try {
+    var saved = localStorage.getItem('ocs-theme');
+    var theme = (saved === 'light' || saved === 'dark') ? saved : 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+</script>
+
 <!-- Favicon for browser tabs and bookmarks -->
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
 
