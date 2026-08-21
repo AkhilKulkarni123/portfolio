@@ -1,26 +1,30 @@
 ---
 layout: post
-title: Live Review — Sprint 1
+title: "Live Review: Sprint 1"
 permalink: /live-review/
 codemirror: true
-description: Individual and team checkpoints for the Sprint 1 Live Review — portfolio setup, SDLC steps, Unit 1-4 progress, unicorns, and office hours crew.
+description: Individual and team checkpoints for the Sprint 1 Live Review. Portfolio setup, tools verification, SDLC steps, Unit 1-4 progress, unicorns, and office hours crew.
 comments: false
 ---
 
 <div class="live-review-page">
 
 <div class="lr-intro">
+  <p>This page is my checklist for the <strong>Live Review starting Thursday</strong>.</p>
+  <ul class="lr-list">
+    <li><strong>Individual</strong> items I present on my own.</li>
+    <li><strong>Team</strong> items I cover with my CSA crew.</li>
+  </ul>
   <p>
-    This page is my checklist for the <strong>Live Review starting Thursday</strong>. It covers the
-    <strong>Individual</strong> items I present on my own, and the <strong>Team</strong> items I cover
-    with my CSA crew. Instead of screenshots, I prove the coding pieces with <strong>live code runners</strong>
-    you can run right here on the page — this is AP CSA, so they run <strong>Java</strong>.
+    Instead of screenshots, I prove the coding pieces with <strong>live code runners</strong> you can run
+    right here on the page. This is AP CSA, so they run <strong>Java</strong>.
   </p>
 </div>
 
 <div class="lr-toc">
   <a href="#setup">1. Portfolio Setup</a>
   <a href="#proof-of-repo">Proof of Repo</a>
+  <a href="#tools-check">Tools Check</a>
   <a href="#sdlc">2. SDLC Steps</a>
   <a href="#units">3. Unit 1–4 Progress</a>
   <a href="#unit1-mcq">Unit 1 MCQ</a>
@@ -52,16 +56,46 @@ comments: false
 <h2 id="proof-of-repo"><span class="lr-badge lr-badge-individual">Individual</span> Proof of Functional and Personal Repo</h2>
 
 <p>
-  Not a template screenshot — this is <em>my</em> deployed site, forked and configured under my own
+  This is <em>my</em> deployed site, not a template screenshot. It's forked and configured under my own
   GitHub account and live at my own GitHub Pages URL:
 </p>
 
 <div class="lr-ref-row">
   <figure>
     <img src="{{ site.baseurl }}/images/live-review/portfolio-home-proof.png" alt="My live, personalized portfolio home page in the browser">
-    <figcaption>My live portfolio home page — functional and personal</figcaption>
+    <figcaption>Live portfolio home page: functional and personal</figcaption>
   </figure>
 </div>
+
+<h2 id="tools-check"><span class="lr-badge lr-badge-individual">Individual</span> Tools Check and Verification</h2>
+
+<p>Straight from my own terminal, the full toolchain installed and pointed at my own repo:</p>
+
+<ul class="lr-list">
+  <li><code>python --version</code>: Python 3.9.6 installed.</li>
+  <li><code>java -version</code>: Java 21 (LTS) installed.</li>
+  <li><code>jupyter kernelspec list</code>: my Flask/Python kernels are registered.</li>
+  <li><code>git config --global --list</code>: Git is configured with my name and GitHub email.</li>
+  <li><code>git remote -v</code>: this repo points at my own GitHub, not the template's.</li>
+</ul>
+
+<pre class="lr-terminal"><code>(venv) rkulki09@Rajeevs-MacBook-Air-7 portfolio % python --version
+Python 3.9.6
+(venv) rkulki09@Rajeevs-MacBook-Air-7 portfolio % java -version
+java version "21.0.12" 2026-07-21 LTS
+Java(TM) SE Runtime Environment (build 21.0.12+7-LTS-205)
+Java HotSpot(TM) 64-Bit Server VM (build 21.0.12+7-LTS-205, mixed mode, sharing)
+(venv) rkulki09@Rajeevs-MacBook-Air-7 portfolio % jupyter kernelspec list
+Available kernels:
+  flaskenv    /Users/rkulki09/Library/Jupyter/kernels/flaskenv
+  python3     /Users/rkulki09/.local/venvs/flaskenv/share/jupyter/kernels/python3
+(venv) rkulki09@Rajeevs-MacBook-Air-7 portfolio % git config --global --list
+user.name=AkhilKulkarni123
+user.email=akhilkulki1113@gmail.com
+(venv) rkulki09@Rajeevs-MacBook-Air-7 portfolio % git remote -v
+origin  https://github.com/AkhilKulkarni123/portfolio.git (fetch)
+origin  https://github.com/AkhilKulkarni123/portfolio.git (push)
+(venv) rkulki09@Rajeevs-MacBook-Air-7 portfolio %</code></pre>
 
 <p><em>Reference: how the general fork → configure → deploy flow looks (shared class screenshots):</em></p>
 
@@ -82,7 +116,7 @@ comments: false
 
 <p>
   <strong>My proof that the Java toolchain works:</strong> the same JDK I installed for setup runs this
-  live. Hit <strong>▶ Run</strong> — if it prints, my environment is real, not a screenshot.
+  live. Hit <strong>▶ Run</strong>. If it prints, my environment is real, not a screenshot.
 </p>
 
 {% capture setup_java %}
@@ -114,7 +148,7 @@ public class Setup {
   <div class="lr-sdlc-step">
     <div class="lr-sdlc-num">2</div>
     <div class="lr-sdlc-title">Code</div>
-    <div class="lr-sdlc-body">Edit locally in VSCode — Markdown, HTML, CSS, or JavaScript.</div>
+    <div class="lr-sdlc-body">Edit locally in VSCode: Markdown, HTML, CSS, or JavaScript.</div>
   </div>
   <div class="lr-sdlc-step">
     <div class="lr-sdlc-num">3</div>
@@ -124,7 +158,7 @@ public class Setup {
   <div class="lr-sdlc-step">
     <div class="lr-sdlc-num">4</div>
     <div class="lr-sdlc-title">Commit</div>
-    <div class="lr-sdlc-body"><code>git add</code>, <code>git commit -m "..."</code> — a clear message per change.</div>
+    <div class="lr-sdlc-body"><code>git add</code>, <code>git commit -m "..."</code>, with a clear message per change.</div>
   </div>
   <div class="lr-sdlc-step">
     <div class="lr-sdlc-num">5</div>
@@ -155,7 +189,7 @@ public class Setup {
 </div>
 
 <p>
-  <strong>The SDLC loop as runnable code</strong> — this Java program is the same 7 steps as a list I can
+  <strong>The SDLC loop as runnable code.</strong> This Java program is the same 7 steps as a list I can
   walk through out loud during the review:
 </p>
 
@@ -224,7 +258,7 @@ public class SDLC {
 
 <p>
   <strong>Live Unit 1–4 capture as one Java program.</strong> AP CSA is object-oriented, so I model each
-  unit as an object with a status and print my progress — run it to see the capture:
+  unit as an object with a status and print my progress. Run it to see the capture:
 </p>
 
 {% capture units_java %}
@@ -261,14 +295,17 @@ public class Progress {
 
 <hr>
 
-<h2 id="unit1-mcq"><span class="lr-badge lr-badge-individual">Individual</span> Unit 1 MCQ — Primitive Types</h2>
+<h2 id="unit1-mcq"><span class="lr-badge lr-badge-individual">Individual</span> Unit 1 MCQ: Primitive Types</h2>
 
 <p>
-  This is our class <strong>Unit 1 Quiz</strong> (Primitive Types) from the CSA MCQ notebooks, rebuilt so it's
-  actually <strong>takeable</strong> right here. Pick an answer for each question and hit <strong>Submit</strong>
-  to score it — each question turns green/red and shows why. Then run the Java underneath to see the same
-  primitive-type concepts execute for real.
+  This is our class <strong>Unit 1 Quiz</strong> (Primitive Types) from the CSA MCQ notebooks, rebuilt so
+  it's actually <strong>takeable</strong> right here.
 </p>
+<ul class="lr-list">
+  <li>Pick an answer for each question and hit <strong>Submit</strong> to score it.</li>
+  <li>Each question turns green or red and shows why.</li>
+  <li>Then run the Java underneath to see the same primitive-type concepts execute for real.</li>
+</ul>
 
 <div class="u1-quiz" id="u1-quiz">
   <form onsubmit="return false;" autocomplete="off">
@@ -288,7 +325,7 @@ public class Progress {
       <label class="u1-opt"><input type="radio" name="u1q2" value="b"> <span>b) 3</span></label>
       <label class="u1-opt"><input type="radio" name="u1q2" value="c"> <span>c) 2</span></label>
       <label class="u1-opt"><input type="radio" name="u1q2" value="d"> <span>d) 2.0</span></label>
-      <div class="u1-explain">Answer: <strong>c</strong>. Dividing two <code>int</code>s does integer division, which truncates toward zero — so <code>5 / 2</code> is <code>2</code>, not <code>2.5</code>. You'd need <code>5.0 / 2</code> to get <code>2.5</code>.</div>
+      <div class="u1-explain">Answer: <strong>c</strong>. Dividing two <code>int</code>s does integer division, which truncates toward zero, so <code>5 / 2</code> is <code>2</code>, not <code>2.5</code>. You'd need <code>5.0 / 2</code> to get <code>2.5</code>.</div>
     </div>
 
     <div class="u1-q" data-answer="a">
@@ -310,7 +347,7 @@ public class Progress {
 
 <p>
   <strong>Now run it.</strong> This is Question 4's primitive-vs-reference example plus the <code>5 / 2</code>
-  behavior from Question 2 — press <strong>▶ Run</strong> to prove the answers in real Java:
+  behavior from Question 2. Press <strong>▶ Run</strong> to prove the answers in real Java:
 </p>
 
 {% capture mcq_java %}
@@ -350,7 +387,7 @@ public class PrimitivesDemo {
 <h2 id="unicorn"><span class="lr-badge lr-badge-individual">Individual</span> 4. What's My Unicorn?</h2>
 
 <p>
-  My <strong>unicorn</strong> isn't one single feature — it's the handful of skills that make my
+  My <strong>unicorn</strong> isn't one single feature. It's the handful of skills that make my
   contributions mine, wherever they show up across units. Not "what did I complete," but "what made my
   version mine." <em>(These are my drafts to defend in the review.)</em>
 </p>
@@ -358,7 +395,7 @@ public class PrimitivesDemo {
 <div class="unicorn-grid">
   <div class="unicorn-card">
     <div class="unicorn-head">🦄 Leadership &amp; Delegation</div>
-    <p class="unicorn-answer">I'm the one who breaks team work into pieces, hands them out, and keeps the Kanban board honest — so Sprint 1 runs as a team effort instead of everyone quietly working solo.</p>
+    <p class="unicorn-answer">I'm the one who breaks team work into pieces, hands them out, and keeps the Kanban board honest, so Sprint 1 runs as a team effort instead of everyone quietly working solo.</p>
   </div>
   <div class="unicorn-card">
     <div class="unicorn-head">🦄 Real-Time WebSocket Knowledge</div>
@@ -366,29 +403,37 @@ public class PrimitivesDemo {
   </div>
   <div class="unicorn-card">
     <div class="unicorn-head">🦄 Backend &amp; Database</div>
-    <p class="unicorn-answer">I own the backend/database side of the stack — API endpoints, models, and persistence — so the frontend has real data to work with instead of hardcoded placeholders.</p>
+    <p class="unicorn-answer">I own the backend/database side of the stack: API endpoints, models, and persistence. That means the frontend has real data to work with instead of hardcoded placeholders.</p>
   </div>
   <div class="unicorn-card">
     <div class="unicorn-head">🦄 Interactive Features</div>
-    <p class="unicorn-answer">I turn static content into something you can click, run, and get feedback from — like the live code runners and the graded quiz on this very page — instead of leaving it as a screenshot.</p>
+    <p class="unicorn-answer">I turn static content into something you can click, run, and get feedback from, like the live code runners and the graded quiz on this very page, instead of leaving it as a screenshot.</p>
   </div>
 </div>
 
 <hr>
 
-<h2 id="office-hours"><span class="lr-badge lr-badge-team">Team</span> Office Hours — CSSE People</h2>
+<h2 id="office-hours"><span class="lr-badge lr-badge-team">Team</span> Office Hours: CSSE People</h2>
 
 <p>
-  <strong>Team activity, done live.</strong> I go to Office Hours to help the CSSE crew — mostly getting
-  their dev tools set up: Git, GitHub, VSCode, and the terminal, the same "Mission Tooling" checklist I used
-  to get my own portfolio running. This is a talk-through item for the review; per the assignment, it doesn't
-  need a separate write-up, so here's the proof that it happened.
+  <strong>Team activity, done live.</strong> I go to Office Hours to help the CSSE crew get their dev
+  tools set up, the same "Mission Tooling" checklist I used to get my own portfolio running:
+</p>
+<ul class="lr-list">
+  <li>Git</li>
+  <li>GitHub</li>
+  <li>VSCode</li>
+  <li>Terminal</li>
+</ul>
+<p>
+  This is a talk-through item for the review. Per the assignment, it doesn't need a separate write-up, so
+  here's the proof that it happened.
 </p>
 
 <div class="lr-ref-row">
   <figure>
     <img src="{{ site.baseurl }}/images/live-review/office-hours-csse.jpg" alt="Helping CSSE students get their dev tools set up during office hours">
-    <figcaption>Office Hours — helping the CSSE crew get set up</figcaption>
+    <figcaption>Office Hours: helping the CSSE crew get set up</figcaption>
   </figure>
 </div>
 
@@ -397,7 +442,7 @@ public class PrimitivesDemo {
 <h2 id="sprint1-friends"><span class="lr-badge lr-badge-team">Team</span> My CSA Sprint 1 Friends</h2>
 
 <p>
-  The crew I went through Sprint 1 onboarding with. I'll introduce them live during the review — this is the
+  The crew I went through Sprint 1 onboarding with. I'll introduce them live during the review. This is the
   team side of the checklist, presented in person rather than as an uploaded photo.
 </p>
 
@@ -504,6 +549,39 @@ public class PrimitivesDemo {
     border: 1px solid var(--lr-border);
     border-radius: 8px;
     padding: 10px 14px;
+  }
+
+  .lr-list {
+    margin: 12px 0;
+    padding-left: 1.3em;
+  }
+
+  .lr-list li {
+    margin: 6px 0;
+    color: var(--lr-text);
+  }
+
+  .lr-list li::marker {
+    color: var(--lr-accent);
+  }
+
+  .lr-terminal {
+    background: var(--lr-bg);
+    border: 1px solid var(--lr-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    overflow-x: auto;
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.85em;
+    line-height: 1.5;
+    color: var(--lr-text);
+  }
+
+  .lr-terminal code {
+    background: none;
+    padding: 0;
+    white-space: pre;
   }
 
   .lr-ref-row {
@@ -803,11 +881,11 @@ public class PrimitivesDemo {
       var result = document.getElementById('u1-result');
       var msg;
       if (score === total) {
-        msg = '🌟 ' + score + ' / ' + total + ' — perfect! You know your primitive types.';
+        msg = '🌟 ' + score + ' / ' + total + ': perfect! You know your primitive types.';
       } else if (score >= Math.ceil(total / 2)) {
-        msg = '👍 ' + score + ' / ' + total + ' — solid. Read the highlighted answers to lock it in.';
+        msg = '👍 ' + score + ' / ' + total + ': solid. Read the highlighted answers to lock it in.';
       } else {
-        msg = '📘 ' + score + ' / ' + total + ' — review the explanations under each question and retry.';
+        msg = '📘 ' + score + ' / ' + total + ': review the explanations under each question and retry.';
       }
       if (unanswered > 0) {
         msg += ' (' + unanswered + ' left blank counted as wrong.)';
