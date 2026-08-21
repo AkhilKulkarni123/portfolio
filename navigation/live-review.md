@@ -60,7 +60,7 @@ comments: false
   GitHub account and live at my own GitHub Pages URL:
 </p>
 
-<div class="lr-ref-row">
+<div class="lr-ref-row lr-ref-row--feature">
   <figure>
     <img src="{{ site.baseurl }}/images/live-review/image-1787332252227.webp" alt="My live, personalized portfolio home page in the browser">
     <figcaption>Live portfolio home page: functional and personal</figcaption>
@@ -430,7 +430,7 @@ public class PrimitivesDemo {
   here's the proof that it happened.
 </p>
 
-<div class="lr-ref-row">
+<div class="lr-ref-row lr-ref-row--feature">
   <figure>
     <img src="{{ site.baseurl }}/images/live-review/image-1787331758594.webp" alt="Helping CSSE students get their dev tools set up during office hours">
     <figcaption>Office Hours: helping the CSSE crew get set up</figcaption>
@@ -609,6 +609,17 @@ public class PrimitivesDemo {
     color: var(--lr-muted);
     text-align: center;
     margin-top: 4px;
+  }
+
+  /* Featured single-image rows (Proof of Repo, Office Hours): full width
+     instead of the small side-by-side reference-screenshot size above. */
+  .lr-ref-row--feature figure {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .lr-ref-row--feature figcaption {
+    font-size: 0.9em;
   }
 
   .lr-sdlc-track {
