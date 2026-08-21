@@ -22,6 +22,7 @@ comments: false
   <a href="#setup">1. Portfolio Setup</a>
   <a href="#sdlc">2. SDLC Steps</a>
   <a href="#units">3. Unit 1–4 Progress</a>
+  <a href="#unit1-mcq">Unit 1 MCQ</a>
   <a href="#unicorn">4. My Unicorn</a>
   <a href="#office-hours">Office Hours (Team)</a>
   <a href="#sprint1-friends">Sprint 1 Friends</a>
@@ -242,6 +243,92 @@ public class Progress {
 }
 {% endcapture %}
 {% include runners/code.html runner_id="units-java" language="java" code=units_java %}
+
+<hr>
+
+<h2 id="unit1-mcq"><span class="lr-badge lr-badge-individual">Individual</span> Unit 1 MCQ — Primitive Types</h2>
+
+<p>
+  This is our class <strong>Unit 1 Quiz</strong> (Primitive Types) from the CSA MCQ notebooks, rebuilt so it's
+  actually <strong>takeable</strong> right here. Pick an answer for each question and hit <strong>Submit</strong>
+  to score it — each question turns green/red and shows why. Then run the Java underneath to see the same
+  primitive-type concepts execute for real.
+</p>
+
+<div class="u1-quiz" id="u1-quiz">
+  <form onsubmit="return false;" autocomplete="off">
+
+    <div class="u1-q" data-answer="b">
+      <div class="u1-q-title">1. Which of the following is a valid declaration of a variable of type <code>int</code> in Java?</div>
+      <label class="u1-opt"><input type="radio" name="u1q1" value="a"> <span>a) <code>int 123variable;</code></span></label>
+      <label class="u1-opt"><input type="radio" name="u1q1" value="b"> <span>b) <code>int variable123;</code></span></label>
+      <label class="u1-opt"><input type="radio" name="u1q1" value="c"> <span>c) <code>int variable#123;</code></span></label>
+      <label class="u1-opt"><input type="radio" name="u1q1" value="d"> <span>d) <code>int variable 123;</code></span></label>
+      <div class="u1-explain">Answer: <strong>b</strong>. Java identifiers can't start with a digit, can't contain symbols like <code>#</code>, and can't contain spaces. <code>variable123</code> (camelCase) is the only legal name.</div>
+    </div>
+
+    <div class="u1-q" data-answer="c">
+      <div class="u1-q-title">2. What is the value of the following expression in Java: <code>5 / 2</code>?</div>
+      <label class="u1-opt"><input type="radio" name="u1q2" value="a"> <span>a) 2.5</span></label>
+      <label class="u1-opt"><input type="radio" name="u1q2" value="b"> <span>b) 3</span></label>
+      <label class="u1-opt"><input type="radio" name="u1q2" value="c"> <span>c) 2</span></label>
+      <label class="u1-opt"><input type="radio" name="u1q2" value="d"> <span>d) 2.0</span></label>
+      <div class="u1-explain">Answer: <strong>c</strong>. Dividing two <code>int</code>s does integer division, which truncates toward zero — so <code>5 / 2</code> is <code>2</code>, not <code>2.5</code>. You'd need <code>5.0 / 2</code> to get <code>2.5</code>.</div>
+    </div>
+
+    <div class="u1-q" data-answer="a">
+      <div class="u1-q-title">3. Which primitive type is used to represent a single character in Java?</div>
+      <label class="u1-opt"><input type="radio" name="u1q3" value="a"> <span>a) <code>char</code></span></label>
+      <label class="u1-opt"><input type="radio" name="u1q3" value="b"> <span>b) <code>String</code></span></label>
+      <label class="u1-opt"><input type="radio" name="u1q3" value="c"> <span>c) <code>int</code></span></label>
+      <label class="u1-opt"><input type="radio" name="u1q3" value="d"> <span>d) <code>byte</code></span></label>
+      <div class="u1-explain">Answer: <strong>a</strong>. <code>char</code> holds one character in single quotes (e.g. <code>'A'</code>). <code>String</code> is a reference type for text, not a primitive.</div>
+    </div>
+
+    <div class="u1-quiz-controls">
+      <button type="button" class="u1-btn u1-submit" onclick="gradeUnit1Quiz()">Submit Quiz</button>
+      <button type="button" class="u1-btn u1-reset" onclick="resetUnit1Quiz()">Reset</button>
+    </div>
+  </form>
+  <div class="u1-result" id="u1-result" role="status" aria-live="polite"></div>
+</div>
+
+<p>
+  <strong>Now run it.</strong> This is Question 4's primitive-vs-reference example plus the <code>5 / 2</code>
+  behavior from Question 2 — press <strong>▶ Run</strong> to prove the answers in real Java:
+</p>
+
+{% capture mcq_java %}
+public class PrimitivesDemo {
+    // Reference type: a Person object lives on the heap
+    static class Person {
+        String name;
+        int age;
+        Person(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    public static void main(String[] args) {
+        // Q2: integer division truncates
+        System.out.println("5 / 2   = " + (5 / 2));     // 2 (int division)
+        System.out.println("5.0 / 2 = " + (5.0 / 2));   // 2.5 (double division)
+
+        // Q3: char is a primitive holding ONE character
+        char grade = 'A';
+        System.out.println("char grade = " + grade);
+
+        // Q4: reference types share the same object in memory
+        Person person1 = new Person("Carl", 25);
+        Person person3 = person1;                 // points to the SAME object
+        person3.age = 99;
+        System.out.println("person1.age = " + person1.age + " (changed through person3)");
+        System.out.println("person1 == person3 ? " + (person1 == person3)); // true
+    }
+}
+{% endcapture %}
+{% include runners/code.html runner_id="unit1-mcq-java" language="java" code=mcq_java %}
 
 <hr>
 
@@ -542,4 +629,181 @@ public class Progress {
     color: var(--lr-text);
     margin: 0;
   }
+
+  /* --- Unit 1 interactive MCQ --- */
+  .u1-quiz {
+    background: var(--lr-bg);
+    border: 1px solid var(--lr-border);
+    border-radius: 12px;
+    padding: 18px;
+    margin: 16px 0;
+  }
+
+  .u1-q {
+    border: 1px solid var(--lr-border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 14px;
+    transition: border-color 0.2s;
+  }
+
+  .u1-q-title {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .u1-opt {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--lr-text);
+  }
+
+  .u1-opt:hover {
+    border-color: var(--lr-border);
+  }
+
+  .u1-opt input {
+    margin-top: 3px;
+    accent-color: var(--lr-accent);
+  }
+
+  /* Feedback states applied after Submit */
+  .u1-opt.is-correct {
+    border-color: #4caf50;
+    background: rgba(76, 175, 80, 0.12);
+  }
+
+  .u1-opt.is-wrong {
+    border-color: #e05656;
+    background: rgba(224, 86, 86, 0.12);
+  }
+
+  .u1-explain {
+    display: none;
+    font-size: 0.85em;
+    color: var(--lr-muted);
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--lr-border);
+  }
+
+  .u1-q.answered .u1-explain {
+    display: block;
+  }
+
+  .u1-quiz-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+  }
+
+  .u1-btn {
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--lr-border);
+  }
+
+  .u1-submit {
+    background: var(--lr-accent);
+    color: #1a1a1a;
+    border-color: var(--lr-accent);
+  }
+
+  .u1-reset {
+    background: transparent;
+    color: var(--lr-text);
+  }
+
+  .u1-result {
+    display: none;
+    margin-top: 14px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--lr-border);
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .u1-result.show {
+    display: block;
+  }
 </style>
+
+<script>
+  (function () {
+    function optionLabels(qEl) {
+      return Array.prototype.slice.call(qEl.querySelectorAll('.u1-opt'));
+    }
+
+    window.gradeUnit1Quiz = function () {
+      var quiz = document.getElementById('u1-quiz');
+      if (!quiz) return;
+      var questions = quiz.querySelectorAll('.u1-q');
+      var score = 0;
+      var unanswered = 0;
+
+      questions.forEach(function (q) {
+        var correct = q.getAttribute('data-answer');
+        var labels = optionLabels(q);
+        var picked = null;
+
+        labels.forEach(function (label) {
+          label.classList.remove('is-correct', 'is-wrong');
+          var input = label.querySelector('input');
+          if (input && input.checked) picked = input.value;
+        });
+
+        if (!picked) unanswered++;
+
+        labels.forEach(function (label) {
+          var input = label.querySelector('input');
+          if (!input) return;
+          if (input.value === correct) {
+            label.classList.add('is-correct');
+          } else if (input.checked) {
+            label.classList.add('is-wrong');
+          }
+        });
+
+        q.classList.add('answered');
+        if (picked === correct) score++;
+      });
+
+      var total = questions.length;
+      var result = document.getElementById('u1-result');
+      var msg;
+      if (score === total) {
+        msg = '🌟 ' + score + ' / ' + total + ' — perfect! You know your primitive types.';
+      } else if (score >= Math.ceil(total / 2)) {
+        msg = '👍 ' + score + ' / ' + total + ' — solid. Read the highlighted answers to lock it in.';
+      } else {
+        msg = '📘 ' + score + ' / ' + total + ' — review the explanations under each question and retry.';
+      }
+      if (unanswered > 0) {
+        msg += ' (' + unanswered + ' left blank counted as wrong.)';
+      }
+      result.textContent = msg;
+      result.classList.add('show');
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+
+    window.resetUnit1Quiz = function () {
+      var quiz = document.getElementById('u1-quiz');
+      if (!quiz) return;
+      quiz.querySelectorAll('input[type="radio"]').forEach(function (i) { i.checked = false; });
+      quiz.querySelectorAll('.u1-opt').forEach(function (l) { l.classList.remove('is-correct', 'is-wrong'); });
+      quiz.querySelectorAll('.u1-q').forEach(function (q) { q.classList.remove('answered'); });
+      var result = document.getElementById('u1-result');
+      result.classList.remove('show');
+      result.textContent = '';
+    };
+  })();
+</script>
