@@ -113,4 +113,5 @@ minima:
     - navigation/blog.md
     - navigation/search.md
     - navigation/about.md
-    - navigation/live-review.md
+    # Live Review is intentionally NOT a top-nav button — reach it directly at the
+    # /live-review/ permalink (https://akhilkulkarni123.github.io/portfolio/live-review/).
