@@ -5,9 +5,19 @@
      site's existing dark minima skin, so nothing changes for
      anyone who never touches the toggle.
    - data-theme="light" (set by the switch in the header, see
-     _includes/theme-toggle.html) forces a light palette on the
-     body and on any component that reads the --ocs-theme-*
+     _includes/theme-toggle.html) swaps in a lighter slate palette
+     on the body and on any component that reads the --ocs-theme-*
      custom properties below.
+
+     This is deliberately NOT a stark white palette: the header
+     (.site-header) is a fixed translucent dark glass
+     (rgba(50,50,50,0.5), see materials/glass.scss) with
+     always-white title/nav text, tuned to sit on a dark backdrop.
+     A near-white body blows out that contrast (white text on a
+     glass-over-white blend reads almost invisible). Keeping the
+     "light" background a mid-tone slate keeps the header legible
+     everywhere on the site while still reading as a clearly
+     different, lighter theme than the near-black default.
    ============================================================ */
 
 :root {
@@ -20,12 +30,12 @@
 }
 
 html[data-theme="light"] {
-  --ocs-theme-bg: #ffffff;
-  --ocs-theme-text: #1a1a1a;
-  --ocs-theme-card: #f7f7f9;
-  --ocs-theme-border: #e2e2e2;
-  --ocs-theme-muted: #5b5b66;
-  --ocs-theme-accent: #d9584a;
+  --ocs-theme-bg: #2b3042;
+  --ocs-theme-text: #f4f1ea;
+  --ocs-theme-card: #383e54;
+  --ocs-theme-border: #4f5570;
+  --ocs-theme-muted: #b9bed0;
+  --ocs-theme-accent: #ffb199;
 }
 
 html[data-theme="light"] body {
