@@ -13,13 +13,14 @@ comments: false
   <p>
     This page is my checklist for the <strong>Live Review starting Thursday</strong>. It covers the
     <strong>Individual</strong> items I present on my own, and the <strong>Team</strong> items I cover
-    with my CSSE crew. Instead of screenshots, I prove the coding pieces with <strong>live code runners</strong>
+    with my CSA crew. Instead of screenshots, I prove the coding pieces with <strong>live code runners</strong>
     you can run right here on the page — this is AP CSA, so they run <strong>Java</strong>.
   </p>
 </div>
 
 <div class="lr-toc">
   <a href="#setup">1. Portfolio Setup</a>
+  <a href="#proof-of-repo">Proof of Repo</a>
   <a href="#sdlc">2. SDLC Steps</a>
   <a href="#units">3. Unit 1–4 Progress</a>
   <a href="#unit1-mcq">Unit 1 MCQ</a>
@@ -46,6 +47,20 @@ comments: false
   <div class="lr-check-item">✅ Ran the site locally (<code>bundle exec jekyll serve</code> / <code>make</code>)</div>
   <div class="lr-check-item">✅ Edited <code>_config.yml</code> with my own title, name, and GitHub info</div>
   <div class="lr-check-item">✅ Pushed a change and confirmed GitHub Pages rebuilt the live site</div>
+</div>
+
+<h2 id="proof-of-repo"><span class="lr-badge lr-badge-individual">Individual</span> Proof of Functional and Personal Repo</h2>
+
+<p>
+  Not a template screenshot — this is <em>my</em> deployed site, forked and configured under my own
+  GitHub account and live at my own GitHub Pages URL:
+</p>
+
+<div class="lr-ref-row">
+  <figure>
+    <img src="{{ site.baseurl }}/images/live-review/portfolio-home-proof.png" alt="My live, personalized portfolio home page in the browser">
+    <figcaption>My live portfolio home page — functional and personal</figcaption>
+  </figure>
 </div>
 
 <p><em>Reference: how the general fork → configure → deploy flow looks (shared class screenshots):</em></p>
@@ -163,7 +178,7 @@ public class SDLC {
 
 <h2 id="units"><span class="lr-badge lr-badge-individual">Individual</span> 3. Progress on Unit 1–4 Capture</h2>
 
-<p>Where I am in each unit of CSSE so far, and what I can point to as evidence during the review.</p>
+<p>Where I am in each unit of CSA so far, and what I can point to as evidence during the review.</p>
 
 <div class="unit-grid">
   <div class="unit-card">
@@ -335,27 +350,27 @@ public class PrimitivesDemo {
 <h2 id="unicorn"><span class="lr-badge lr-badge-individual">Individual</span> 4. What's My Unicorn?</h2>
 
 <p>
-  My <strong>unicorn</strong> is the one standout, one-of-a-kind thing I brought to each unit — the idea,
-  fix, or feature that only I thought to add. Not "what did I complete," but "what made my version mine."
-  <em>(These are my drafts to defend in the review — I'll swap in the exact detail for each as I finish the unit.)</em>
+  My <strong>unicorn</strong> isn't one single feature — it's the handful of skills that make my
+  contributions mine, wherever they show up across units. Not "what did I complete," but "what made my
+  version mine." <em>(These are my drafts to defend in the review.)</em>
 </p>
 
 <div class="unicorn-grid">
   <div class="unicorn-card">
-    <div class="unicorn-head">🦄 Unit 1</div>
-    <p class="unicorn-answer">I turned my Live Review page into runnable proof — instead of screenshots, my portfolio setup is verified by Java code runners anyone can execute on the page.</p>
+    <div class="unicorn-head">🦄 Leadership &amp; Delegation</div>
+    <p class="unicorn-answer">I'm the one who breaks team work into pieces, hands them out, and keeps the Kanban board honest — so Sprint 1 runs as a team effort instead of everyone quietly working solo.</p>
   </div>
   <div class="unicorn-card">
-    <div class="unicorn-head">🦄 Unit 2</div>
-    <p class="unicorn-answer">For student-teaching I built my popcorn hack as an interactive code runner, so the class learns the concept by editing and running it live instead of just watching slides.</p>
+    <div class="unicorn-head">🦄 Real-Time WebSocket Knowledge</div>
+    <p class="unicorn-answer">I understand how our Socket.IO/WebSocket connections push live updates without a page reload, so I'm the one the team leans on when a feature needs to feel real-time instead of static.</p>
   </div>
   <div class="unicorn-card">
-    <div class="unicorn-head">🦄 Unit 3</div>
-    <p class="unicorn-answer">My N@tM game will ship one mechanic none of my teammates have — a custom interaction I designed myself — so the game reads as mine and not the template.</p>
+    <div class="unicorn-head">🦄 Backend &amp; Database</div>
+    <p class="unicorn-answer">I own the backend/database side of the stack — API endpoints, models, and persistence — so the frontend has real data to work with instead of hardcoded placeholders.</p>
   </div>
   <div class="unicorn-card">
-    <div class="unicorn-head">🦄 Unit 4</div>
-    <p class="unicorn-answer">In the GameEngine I'll add my own reusable class (clean OOP with inheritance) that the rest of the team can extend, so my code becomes shared infrastructure.</p>
+    <div class="unicorn-head">🦄 Interactive Features</div>
+    <p class="unicorn-answer">I turn static content into something you can click, run, and get feedback from — like the live code runners and the graded quiz on this very page — instead of leaving it as a screenshot.</p>
   </div>
 </div>
 
@@ -364,15 +379,22 @@ public class PrimitivesDemo {
 <h2 id="office-hours"><span class="lr-badge lr-badge-team">Team</span> Office Hours — CSSE People</h2>
 
 <p>
-  <strong>Team activity, done live.</strong> I go to Office Hours to connect with other CSSE students outside
-  my usual team — swapping fixes, comparing portfolios, and finding people to pair with. This is a talk-through
-  item for the review; per the assignment, it doesn't need an artifact posted on the portfolio page itself, so
-  there's nothing to capture here beyond showing up and naming the people I met.
+  <strong>Team activity, done live.</strong> I go to Office Hours to help the CSSE crew — mostly getting
+  their dev tools set up: Git, GitHub, VSCode, and the terminal, the same "Mission Tooling" checklist I used
+  to get my own portfolio running. This is a talk-through item for the review; per the assignment, it doesn't
+  need a separate write-up, so here's the proof that it happened.
 </p>
+
+<div class="lr-ref-row">
+  <figure>
+    <img src="{{ site.baseurl }}/images/live-review/office-hours-csse.jpg" alt="Helping CSSE students get their dev tools set up during office hours">
+    <figcaption>Office Hours — helping the CSSE crew get set up</figcaption>
+  </figure>
+</div>
 
 <hr>
 
-<h2 id="sprint1-friends"><span class="lr-badge lr-badge-team">Team</span> My CSSE Sprint 1 Friends</h2>
+<h2 id="sprint1-friends"><span class="lr-badge lr-badge-team">Team</span> My CSA Sprint 1 Friends</h2>
 
 <p>
   The crew I went through Sprint 1 onboarding with. I'll introduce them live during the review — this is the
