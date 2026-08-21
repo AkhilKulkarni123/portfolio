@@ -62,7 +62,7 @@ comments: false
 
 <div class="lr-ref-row">
   <figure>
-    <img src="{{ site.baseurl }}/images/live-review/portfolio-home-proof.png" alt="My live, personalized portfolio home page in the browser">
+    <img src="{{ site.baseurl }}/images/live-review/image-1787332252227.webp" alt="My live, personalized portfolio home page in the browser">
     <figcaption>Live portfolio home page: functional and personal</figcaption>
   </figure>
 </div>
@@ -432,7 +432,7 @@ public class PrimitivesDemo {
 
 <div class="lr-ref-row">
   <figure>
-    <img src="{{ site.baseurl }}/images/live-review/office-hours-csse.jpg" alt="Helping CSSE students get their dev tools set up during office hours">
+    <img src="{{ site.baseurl }}/images/live-review/image-1787331758594.webp" alt="Helping CSSE students get their dev tools set up during office hours">
     <figcaption>Office Hours: helping the CSSE crew get set up</figcaption>
   </figure>
 </div>
